@@ -20,7 +20,14 @@ jobs:
       - name: Verify tag matches package version
         if: startsWith(github.ref, 'refs/tags/v')
         run: test "v$(node -p "require('./package.json').version")" = "${GITHUB_REF_NAME}"
+      - name: Check whether this version is already on npm
+        id: published
+        run: |
+          V=$(node -p "require('./package.json').version")
+          if npm view "contribsutra-ai@${V}" version >/dev/null 2>&1; then echo "already=true" >> "$GITHUB_OUTPUT"; echo "contribsutra-ai@${V} is already published; nothing to do."; else echo "already=false" >> "$GITHUB_OUTPUT"; fi
       - name: Use npm with trusted-publishing (OIDC) support
+        if: steps.published.outputs.already == 'false'
         run: npm install -g npm@latest
       - name: Publish to npm (trusted publishing, no stored token)
+        if: steps.published.outputs.already == 'false'
         run: npm publish --provenance --access public
