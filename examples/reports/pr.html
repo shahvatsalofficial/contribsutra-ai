@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>ContribSutra AI — PR Readiness (ProofDesk)</title><style>:root{--bg:#f6f8fb;--card:#fff;--ink:#14202b;--mute:#566574;--line:#d8e0e9;--brand:#0d6b7c;--ok:#13795b;--warn:#a15c00;--bad:#b3261e}@media(prefers-color-scheme:dark){:root{--bg:#0e141a;--card:#16202a;--ink:#e6edf3;--mute:#9fb0bf;--line:#2a3846;--brand:#4cc3d6;--ok:#4cd6a3;--warn:#f0b254;--bad:#ff8a80}}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1040px;margin:0 auto;padding:2rem 1rem 4rem}h1{font-size:1.6rem;margin:.2rem 0 1rem}h2{font-size:1.15rem;margin:2rem 0 .6rem;border-bottom:1px solid var(--line);padding-bottom:.3rem}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem 1.25rem;margin:1rem 0}dl{display:grid;grid-template-columns:max-content 1fr;gap:.25rem 1rem;margin:0}dt{color:var(--mute)}dd{margin:0;overflow-wrap:anywhere}.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}table{border-collapse:collapse;width:100%;font-size:.9rem}th,td{text-align:left;padding:.5rem .65rem;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}th{color:var(--mute);font-weight:600}tr:last-child td{border-bottom:0}.verdict{border-left:6px solid var(--warn);font-size:1.05rem}.verdict.bad{border-color:var(--bad)}.verdict.good{border-color:var(--ok)}.verdict b{font-size:1.3rem}.pill{display:inline-block;padding:.02rem .55rem;border-radius:99px;font-size:.78rem;border:1px solid currentColor;white-space:nowrap}.pill.ok{color:var(--ok)}.pill.warn{color:var(--warn)}.pill.bad{color:var(--bad)}.note{color:var(--mute);font-style:italic}pre{overflow:auto;background:var(--card);border:1px solid var(--line);padding:1rem;border-radius:8px;white-space:pre-wrap}footer{color:var(--mute);font-size:.85rem;margin-top:2rem}a{color:var(--brand)}@media print{body{background:#fff;color:#000}}</style></head><body><main><h1>ContribSutra AI — PR Readiness (ProofDesk)</h1>
+<section class="card"><dl><dt>Schema</dt><dd>1.0</dd><dt>Integrity</dt><dd>SHA-256 seal verified (ad34c9726e11dbc3…)</dd><dt>Trust boundary</dt><dd>Imported content is untrusted. No GitHub writes, network calls or repository scripts were executed.</dd></dl></section>
+<section class="card verdict " role="status"><b>Verdict: HUMAN_REVIEW_REQUIRED</b><br>A person must review the diff and decide to submit. Nothing was submitted.</section>
+<section class="card"><dl><dt>Issue</dt><dd>#101</dd><dt>AI assistance</dt><dd>undeclared</dd><dt>External writes</dt><dd>0</dd></dl></section>
+<h2>Statements</h2>
+<div class="scroll"><table><thead><tr><th scope="col">Status</th><th scope="col">Message</th></tr></thead><tbody><tr><td><span class="pill warn">REVIEW</span></td><td>User-supplied test statuses are not independently executed or verified by ContribSutra</td></tr><tr><td><span class="pill warn">GAP</span></td><td>AI assistance not declared; disclose it if the project policy asks</td></tr></tbody></table></div>
+<h2>Test claims</h2>
+<div class="scroll"><table><thead><tr><th scope="col">Test</th><th scope="col">Author claim</th><th scope="col">Independent verification</th></tr></thead><tbody><tr><td>npm test</td><td>reported_passed</td><td><span class="pill warn">unverified_external_claim</span></td></tr><tr><td>lint</td><td><span class="pill warn">not_run</span></td><td><span class="pill warn">unverified_external_claim</span></td></tr></tbody></table></div>
+<h2>Evidence channels</h2>
+<div class="scroll"><table><thead><tr><th scope="col">Channel</th><th scope="col">Items</th></tr></thead><tbody><tr><td>Verified by this tool</td><td>6 repository files hashed at scan time (SHA-256)</td></tr><tr><td>User-reported</td><td>npm test: reported_passed</td></tr><tr><td>Inferred / recommended</td><td>Confirm maintainer issue or proposal invitation; Read security and contribution policies; Review the actual diff and protect sensitive files</td></tr><tr><td>Not run / unknown</td><td>Tests were not executed by ContribSutra; Maintainer intent for this issue is unknown; lint: no pass/fail claim</td></tr></tbody></table></div>
+<h2>Checklist</h2>
+<ul style="list-style:none;padding-left:0"><li>☐ Confirm maintainer issue or proposal invitation</li><li>☐ Read security and contribution policies</li><li>☐ Review the actual diff and protect sensitive files</li><li>☐ Run approved tests and attach verifiable results</li><li>☐ Disclose AI assistance if required by project policy</li><li>☐ Ask a person to approve submission; never auto-open or auto-merge</li><li>☐ Sign off commits if the project requires it (CONTRIBUTING.md:5)</li></ul>
+<h2>Draft PR description (edit in your own words)</h2>
+<pre>## Purpose
+
+Addresses #101. (Replace with one sentence in your own words.)
+
+## Scope
+
+(List changed files.)
+
+## Tests
+
+- npm test: reported_passed (reported by author; not independently verified)
+- lint: not_run (reported by author; not independently verified)
+
+## Not run / limits
+
+- (List checks you did not run and risks you see.)
+
+## AI assistance
+
+- (Declare whether AI tools helped, as the project requires.)
+
+## Checklist
+
+- [ ] Confirm maintainer issue or proposal invitation
+- [ ] Read security and contribution policies
+- [ ] Review the actual diff and protect sensitive files
+- [ ] Run approved tests and attach verifiable results
+- [ ] Disclose AI assistance if required by project policy
+- [ ] Ask a person to approve submission; never auto-open or auto-merge
+- [ ] Sign off commits if the project requires it (CONTRIBUTING.md:5)</pre>
+<footer>ContribSutra AI 0.2.0 · Understand the code. Find your first win. Contribute with confidence. · created by Vatsal Shah · Apache-2.0</footer></main></body></html>

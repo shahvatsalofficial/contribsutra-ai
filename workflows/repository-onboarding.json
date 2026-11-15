@@ -1,0 +1,34 @@
+{
+  "name": "repository-onboarding",
+  "version": "1.0",
+  "trigger": "user_invoked_only",
+  "defaultMode": "read_only",
+  "steps": [
+    {
+      "id": "repository-onboarding-1",
+      "action": "Select approved local repository",
+      "requiresApproval": false
+    },
+    {
+      "id": "repository-onboarding-2",
+      "action": "Read community and contributor policies",
+      "requiresApproval": false
+    },
+    {
+      "id": "repository-onboarding-3",
+      "action": "Inventory scripts and ecosystem without running them",
+      "requiresApproval": false
+    },
+    {
+      "id": "repository-onboarding-4",
+      "action": "Publish source-linked setup guide",
+      "requiresApproval": false
+    },
+    {
+      "id": "repository-onboarding-5",
+      "action": "Identify unanswered setup questions",
+      "requiresApproval": false
+    }
+  ],
+  "executor": "documented_orchestrator_not_automated_in_v0.1"
+}

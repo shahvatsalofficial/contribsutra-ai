@@ -1,0 +1,39 @@
+{
+  "name": "learn-and-implement",
+  "version": "1.0",
+  "trigger": "user_invoked_only",
+  "defaultMode": "read_only",
+  "steps": [
+    {
+      "id": "learn-and-implement-1",
+      "action": "Read issue and contribution guidance",
+      "requiresApproval": false
+    },
+    {
+      "id": "learn-and-implement-2",
+      "action": "Decompose into acceptance checks",
+      "requiresApproval": false
+    },
+    {
+      "id": "learn-and-implement-3",
+      "action": "Recommend minimal patch plan",
+      "requiresApproval": false
+    },
+    {
+      "id": "learn-and-implement-4",
+      "action": "Wait for authorized editor implementation",
+      "requiresApproval": true
+    },
+    {
+      "id": "learn-and-implement-5",
+      "action": "Record actually executed tests",
+      "requiresApproval": false
+    },
+    {
+      "id": "learn-and-implement-6",
+      "action": "Prepare reviewable summary and maintainer questions",
+      "requiresApproval": false
+    }
+  ],
+  "executor": "documented_orchestrator_not_automated_in_v0.1"
+}

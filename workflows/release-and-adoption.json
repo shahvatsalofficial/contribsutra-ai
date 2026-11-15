@@ -1,0 +1,39 @@
+{
+  "name": "release-and-adoption",
+  "version": "1.0",
+  "trigger": "user_invoked_only",
+  "defaultMode": "read_only",
+  "steps": [
+    {
+      "id": "release-and-adoption-1",
+      "action": "Verify real local tests",
+      "requiresApproval": false
+    },
+    {
+      "id": "release-and-adoption-2",
+      "action": "Check cross-platform CI and supply-chain posture",
+      "requiresApproval": false
+    },
+    {
+      "id": "release-and-adoption-3",
+      "action": "Review documentation and contribution UX",
+      "requiresApproval": false
+    },
+    {
+      "id": "release-and-adoption-4",
+      "action": "Verify actual IDE adapter support",
+      "requiresApproval": false
+    },
+    {
+      "id": "release-and-adoption-5",
+      "action": "Audit naming/licensing and attribution",
+      "requiresApproval": false
+    },
+    {
+      "id": "release-and-adoption-6",
+      "action": "Publish only after human approval",
+      "requiresApproval": false
+    }
+  ],
+  "executor": "documented_orchestrator_not_automated_in_v0.1"
+}

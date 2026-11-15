@@ -1,0 +1,18 @@
+{
+  "default": "read-only",
+  "localScan": "allowed only on user-specified path",
+  "issueSnapshot": "local_file_only",
+  "arbitraryProcessExecution": "denied",
+  "externalNetwork": "denied",
+  "githubWrite": "denied",
+  "shellRepositoryScripts": "requires_explicit_permission_and_sandbox",
+  "globalInstalls": "requires_approval",
+  "protectedPaths": [
+    ".env",
+    ".git",
+    "node_modules",
+    "secrets",
+    "credentials"
+  ],
+  "externalUpdates": "not_implemented"
+}

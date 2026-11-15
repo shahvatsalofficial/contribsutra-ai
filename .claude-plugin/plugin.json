@@ -1,0 +1,10 @@
+{
+  "name": "contribsutra-ai",
+  "description": "ContribSutra AI \u2014 contributor onboarding and maintainer-respect agent skills",
+  "version": "0.1.0",
+  "author": {
+    "name": "Vatsal Shah"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/OWNER/contribsutra"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "environment-doctor",
+  "version": "1.0",
+  "trigger": "user_invoked_only",
+  "defaultMode": "read_only",
+  "steps": [
+    {
+      "id": "environment-doctor-1",
+      "action": "Identify host platform and allowed version probes",
+      "requiresApproval": false
+    },
+    {
+      "id": "environment-doctor-2",
+      "action": "Read declared toolchain requirements",
+      "requiresApproval": false
+    },
+    {
+      "id": "environment-doctor-3",
+      "action": "Run only bounded version probes",
+      "requiresApproval": false
+    },
+    {
+      "id": "environment-doctor-4",
+      "action": "Compare actual and expected versions",
+      "requiresApproval": false
+    },
+    {
+      "id": "environment-doctor-5",
+      "action": "Provide safe repair instructions and mark untested paths",
+      "requiresApproval": false
+    }
+  ],
+  "executor": "documented_orchestrator_not_automated_in_v0.1"
+}

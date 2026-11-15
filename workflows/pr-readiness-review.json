@@ -1,0 +1,34 @@
+{
+  "name": "pr-readiness-review",
+  "version": "1.0",
+  "trigger": "user_invoked_only",
+  "defaultMode": "read_only",
+  "steps": [
+    {
+      "id": "pr-readiness-review-1",
+      "action": "Locate approved issue",
+      "requiresApproval": false
+    },
+    {
+      "id": "pr-readiness-review-2",
+      "action": "Inspect actual diff evidence if supplied",
+      "requiresApproval": false
+    },
+    {
+      "id": "pr-readiness-review-3",
+      "action": "Review branch conventions and security constraints",
+      "requiresApproval": false
+    },
+    {
+      "id": "pr-readiness-review-4",
+      "action": "Distinguish self-reported from verified test outcomes",
+      "requiresApproval": false
+    },
+    {
+      "id": "pr-readiness-review-5",
+      "action": "Prepare human-reviewed PR draft with no auto submission",
+      "requiresApproval": true
+    }
+  ],
+  "executor": "documented_orchestrator_not_automated_in_v0.1"
+}

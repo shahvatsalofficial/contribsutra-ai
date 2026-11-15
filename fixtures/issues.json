@@ -1,0 +1,8 @@
+[
+{"number":101,"title":"Improve local setup instructions","state":"open","labels":["good first issue","documentation"],"body":"Clarify the prerequisites in README"},
+{"number":102,"title":"Add a small unit test","state":"open","labels":["good first issue","javascript"],"body":"Add a focused test"},
+{"number":103,"title":"Refactor the entire architecture","state":"open","labels":["enhancement"],"body":"Large migration"},
+{"number":104,"title":"Investigate a secret exposure","state":"open","labels":["security","help wanted"],"body":"Restricted details"},
+{"number":105,"title":"Update build flags","state":"closed","labels":["good first issue"]},
+{"number":106,"title":"Already assigned task","state":"open","labels":["good first issue"],"assignee":{"login":"maintainer"}}
+]

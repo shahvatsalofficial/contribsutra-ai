@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/shahvatsalofficial/contribsutra-ai/schemas/environment-doctor.schema.json",
+  "title": "contribsutra.environment-doctor",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "host",
+    "tools",
+    "requirementChecks",
+    "recommendations",
+    "status",
+    "seal"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "kind": {
+      "const": "contribsutra.environment-doctor"
+    },
+    "seal": {
+      "type": "object",
+      "required": [
+        "hash"
+      ],
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "status": {
+      "const": "INFORMATION_ONLY"
+    },
+    "requirementChecks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "tool",
+          "declared",
+          "verdict"
+        ],
+        "properties": {
+          "verdict": {
+            "enum": [
+              "satisfied",
+              "not_satisfied",
+              "cannot_determine",
+              "tool_missing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

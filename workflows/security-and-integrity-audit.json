@@ -1,0 +1,34 @@
+{
+  "name": "security-and-integrity-audit",
+  "version": "1.0",
+  "trigger": "user_invoked_only",
+  "defaultMode": "read_only",
+  "steps": [
+    {
+      "id": "security-and-integrity-audit-1",
+      "action": "Scan bounded inputs for leaked secrets",
+      "requiresApproval": false
+    },
+    {
+      "id": "security-and-integrity-audit-2",
+      "action": "Check provenance and SHA-256 report seal",
+      "requiresApproval": false
+    },
+    {
+      "id": "security-and-integrity-audit-3",
+      "action": "Evaluate untrusted content boundary",
+      "requiresApproval": false
+    },
+    {
+      "id": "security-and-integrity-audit-4",
+      "action": "Verify no external account write occurred",
+      "requiresApproval": false
+    },
+    {
+      "id": "security-and-integrity-audit-5",
+      "action": "Report residual limitations",
+      "requiresApproval": false
+    }
+  ],
+  "executor": "documented_orchestrator_not_automated_in_v0.1"
+}

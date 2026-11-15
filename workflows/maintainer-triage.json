@@ -1,0 +1,34 @@
+{
+  "name": "maintainer-triage",
+  "version": "1.0",
+  "trigger": "user_invoked_only",
+  "defaultMode": "read_only",
+  "steps": [
+    {
+      "id": "maintainer-triage-1",
+      "action": "Read maintained contribution policy",
+      "requiresApproval": false
+    },
+    {
+      "id": "maintainer-triage-2",
+      "action": "Compare proposed scope with labeled needs",
+      "requiresApproval": false
+    },
+    {
+      "id": "maintainer-triage-3",
+      "action": "Avoid duplicates and unsolicited mass proposals",
+      "requiresApproval": false
+    },
+    {
+      "id": "maintainer-triage-4",
+      "action": "Give respectful improvement suggestions",
+      "requiresApproval": false
+    },
+    {
+      "id": "maintainer-triage-5",
+      "action": "Require maintainer-controlled approval for all writes",
+      "requiresApproval": false
+    }
+  ],
+  "executor": "documented_orchestrator_not_automated_in_v0.1"
+}

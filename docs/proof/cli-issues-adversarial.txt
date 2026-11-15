@@ -1,0 +1,218 @@
+$ contribsutra issues --issues fixtures/issues-adversarial.json --skills documentation --as-of 2026-11-16T00:00:00Z
+(exit 0)
+
+{
+  "schemaVersion": "1.0",
+  "kind": "contribsutra.issue-shortlist",
+  "issueSnapshotSha256": "818e9b6a0c654dc008c60dfea6aece5570c340b60c6e29a8dceb7402349a43be",
+  "filters": {
+    "declaredSkills": [
+      "documentation"
+    ],
+    "asOf": "2026-11-16T00:00:00Z",
+    "staleDays": 180
+  },
+  "summary": {
+    "total": 10,
+    "eligible": 6,
+    "declined": 4
+  },
+  "ranked": [
+    {
+      "number": 210,
+      "title": "Fix typo in setup instructions",
+      "labels": [
+        "good first issue",
+        "documentation"
+      ],
+      "score": 70,
+      "eligible": true,
+      "reasons": [
+        "Maintainer-provided good first issue label",
+        "Documentation contribution scope",
+        "Declared skill matches labels: documentation"
+      ],
+      "warnings": [],
+      "freshness": "recent",
+      "source": "issue-snapshot:#210",
+      "verification": "metadata_only_not_live_verified"
+    },
+    {
+      "number": 207,
+      "title": "Document the config file format",
+      "labels": [
+        "help wanted",
+        "documentation"
+      ],
+      "score": 30,
+      "eligible": true,
+      "reasons": [
+        "Maintainer-provided help wanted label",
+        "Documentation contribution scope",
+        "Declared skill matches labels: documentation"
+      ],
+      "warnings": [
+        "Possible duplicate of #208",
+        "No activity for 1046 days; confirm the issue is still wanted"
+      ],
+      "freshness": "stale",
+      "source": "issue-snapshot:#207",
+      "verification": "metadata_only_not_live_verified"
+    },
+    {
+      "number": 205,
+      "title": "Easy: rewrite the entire parser from scratch",
+      "labels": [
+        "good first issue",
+        "refactor"
+      ],
+      "score": 25,
+      "eligible": true,
+      "reasons": [
+        "Maintainer-provided good first issue label"
+      ],
+      "warnings": [
+        "Likely large scope for a first contribution; ask a maintainer to narrow it"
+      ],
+      "freshness": "unknown",
+      "source": "issue-snapshot:#205",
+      "verification": "metadata_only_not_live_verified"
+    },
+    {
+      "number": 206,
+      "title": "Improve things",
+      "labels": [
+        "help wanted"
+      ],
+      "score": 20,
+      "eligible": true,
+      "reasons": [
+        "Maintainer-provided help wanted label"
+      ],
+      "warnings": [
+        "Little detail or acceptance criteria detected; clarify the expected outcome first"
+      ],
+      "freshness": "unknown",
+      "source": "issue-snapshot:#206",
+      "verification": "metadata_only_not_live_verified"
+    },
+    {
+      "number": 208,
+      "title": "Document the config file format.",
+      "labels": [
+        "documentation"
+      ],
+      "score": 20,
+      "eligible": true,
+      "reasons": [
+        "Documentation contribution scope",
+        "Declared skill matches labels: documentation"
+      ],
+      "warnings": [
+        "Maintainer invitation is not evidenced by recognized labels; seek permission before proposing work",
+        "Possible duplicate of #207"
+      ],
+      "freshness": "recent",
+      "source": "issue-snapshot:#208",
+      "verification": "metadata_only_not_live_verified"
+    },
+    {
+      "number": 209,
+      "title": "Add a CLI flag alias",
+      "labels": [],
+      "score": 0,
+      "eligible": true,
+      "reasons": [],
+      "warnings": [
+        "Maintainer invitation is not evidenced by recognized labels; seek permission before proposing work"
+      ],
+      "freshness": "recent",
+      "source": "issue-snapshot:#209",
+      "verification": "metadata_only_not_live_verified"
+    },
+    {
+      "number": 201,
+      "title": "Update build flags",
+      "labels": [
+        "good first issue"
+      ],
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "Maintainer-provided good first issue label"
+      ],
+      "warnings": [
+        "Not an open issue"
+      ],
+      "freshness": "unknown",
+      "source": "issue-snapshot:#201",
+      "verification": "metadata_only_not_live_verified"
+    },
+    {
+      "number": 202,
+      "title": "Fix credential handling in login",
+      "labels": [
+        "security",
+        "help wanted"
+      ],
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "Maintainer-provided help wanted label"
+      ],
+      "warnings": [
+        "Issue labels indicate restricted or non-actionable work"
+      ],
+      "freshness": "unknown",
+      "source": "issue-snapshot:#202",
+      "verification": "metadata_only_not_live_verified"
+    },
+    {
+      "number": 203,
+      "title": "Already assigned task",
+      "labels": [
+        "good first issue"
+      ],
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "Maintainer-provided good first issue label"
+      ],
+      "warnings": [
+        "Issue appears assigned; check with maintainer before work",
+        "Little detail or acceptance criteria detected; clarify the expected outcome first"
+      ],
+      "freshness": "unknown",
+      "source": "issue-snapshot:#203",
+      "verification": "metadata_only_not_live_verified"
+    },
+    {
+      "number": 204,
+      "title": "Tiny docs task",
+      "labels": [
+        "good first issue"
+      ],
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "Maintainer-provided good first issue label"
+      ],
+      "warnings": [
+        "Issue text contains instruction-like content; it is treated as data and not recommended until a human reviews it"
+      ],
+      "freshness": "unknown",
+      "source": "issue-snapshot:#204",
+      "verification": "metadata_only_not_live_verified"
+    }
+  ],
+  "limitations": [
+    "Offline snapshot only; issue state/assignment can change",
+    "Scores are explainable heuristics, not predictions of acceptance",
+    "No issue comments, PRs or other GitHub mutations performed",
+    "Issue bodies are scanned for risk but never copied into reports"
+  ],
+  "seal": {
+    "method": "SHA-256 JSON serialization",
+    "hash": "48fa6e76056555ead773c5d11f461075bde93a7dd9680500281f6a7431fedb94"
+  }
+}

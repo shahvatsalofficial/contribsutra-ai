@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use ContribSutra AI, please cite it as below."
+title: "ContribSutra AI"
+abstract: "Offline, evidence-backed open-source contributor onboarding CLI with portable agent skills. Teaches contributors and protects maintainers from low-quality automated pull requests."
+type: software
+authors:
+  - family-names: Shah
+    given-names: Vatsal
+version: 0.2.0
+date-released: 2026-11-16
+license: Apache-2.0
+repository-code: "https://github.com/shahvatsalofficial/contribsutra-ai"
+keywords: [open-source, first-contribution, good-first-issue, onboarding, agent-skills, maintainers]

@@ -1,0 +1,12 @@
+ContribSutra AI
+Copyright 2026 Vatsal Shah
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This product includes no third-party code, model weights or datasets. It has zero
+runtime dependencies (Node.js built-ins only). Fixtures under fixtures/ are synthetic,
+written for this project.
+
+Third-party names (GitHub, Claude, Anthropic, Cursor, Codex, OpenAI, GitHub Copilot,
+Gemini, Google, OpenCode, Node.js, npm) are trademarks of their respective owners and
+are used only to describe compatibility targets. No affiliation or endorsement is implied.

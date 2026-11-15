@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "contribsutra.repository-scan",
+  "product": "ContribSutra AI",
+  "sourceDirectory": "demo-repo",
+  "artifacts": [
+    {
+      "id": "readme",
+      "path": "README.md",
+      "sha256": "cb22f16d705b0c52081339e8ab51daa17675a34b5a77ede6a5eda854a0005cd0",
+      "bytes": 151,
+      "source": "README.md:1",
+      "observed": true
+    },
+    {
+      "id": "contributing",
+      "path": "CONTRIBUTING.md",
+      "sha256": "5bafab86ca52f68e1560041d85b9ce80455f78b7e96123faed40728a6b05aa63",
+      "bytes": 316,
+      "source": "CONTRIBUTING.md:1",
+      "observed": true
+    },
+    {
+      "id": "license",
+      "path": "LICENSE",
+      "sha256": "1e357601e266179fb347bc5048f21c3d02df9637a778da530ea45f7224d5a304",
+      "bytes": 186,
+      "source": "LICENSE:1",
+      "observed": true
+    },
+    {
+      "id": "conduct",
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "27934cf9987b91f04b9c009e1657e1c7b274c1998682906438dc89343646355a",
+      "bytes": 90,
+      "source": "CODE_OF_CONDUCT.md:1",
+      "observed": true
+    },
+    {
+      "id": "pr-template",
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "sha256": "bf84cc221f2736539c3525dc6f665c3662fcf69bd8b5bb74a8279aa0ea485ad4",
+      "bytes": 53,
+      "source": ".github/PULL_REQUEST_TEMPLATE.md:1",
+      "observed": true
+    },
+    {
+      "id": "package-manifest",
+      "path": "package.json",
+      "sha256": "fcd73b39c532d7fccc58718efd464ba218bd8921f0428ed6f5b2609155db9fdb",
+      "bytes": 121,
+      "source": "package.json:1",
+      "observed": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "MISSING_SECURITY",
+      "status": "missing",
+      "severity": "advisory",
+      "path": "SECURITY.md",
+      "explanation": "Private reporting channel for vulnerabilities not located at a supported default path (SECURITY.md, .github/SECURITY.md, docs/SECURITY.md); it may be provided elsewhere"
+    },
+    {
+      "id": "MISSING_ISSUE_TEMPLATE",
+      "status": "missing",
+      "severity": "advisory",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "explanation": "Issue reporting template not located at a supported default path (.github/ISSUE_TEMPLATE/bug_report.md, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE.md); it may be provided elsewhere"
+    },
+    {
+      "id": "MISSING_CODEOWNERS",
+      "status": "missing",
+      "severity": "advisory",
+      "path": ".github/CODEOWNERS",
+      "explanation": "Review ownership map not located at a supported default path (.github/CODEOWNERS, CODEOWNERS, docs/CODEOWNERS); it may be provided elsewhere"
+    },
+    {
+      "id": "MISSING_AGENTS",
+      "status": "missing",
+      "severity": "advisory",
+      "path": "AGENTS.md",
+      "explanation": "AI coding guidance not located at a supported default path (AGENTS.md); it may be provided elsewhere"
+    },
+    {
+      "id": "MISSING_CLAUDE",
+      "status": "missing",
+      "severity": "advisory",
+      "path": "CLAUDE.md",
+      "explanation": "Claude-specific contributor guidance not located at a supported default path (CLAUDE.md); it may be provided elsewhere"
+    }
+  ],
+  "license": {
+    "detected": "MIT",
+    "method": "heuristic text match",
+    "source": "LICENSE:1"
+  },
+  "policySignals": [
+    {
+      "id": "TESTS_REQUIRED_MENTIONED",
+      "meaning": "Tests are expected before submitting",
+      "source": "README.md:3",
+      "excerpt": "A synthetic example open-source JavaScript library for ContribSutra tests. Run `npm test` after inspecting package scripts.",
+      "evidence": "pattern_match_inferred"
+    },
+    {
+      "id": "DCO_MENTIONED",
+      "meaning": "Commits may need a Signed-off-by line (DCO)",
+      "source": "CONTRIBUTING.md:5",
+      "excerpt": "Sign your commits with a `Signed-off-by` line (DCO). Do not open a PR without review.",
+      "evidence": "pattern_match_inferred"
+    },
+    {
+      "id": "SIGNED_COMMITS_MENTIONED",
+      "meaning": "Cryptographically signed commits may be required",
+      "source": "CONTRIBUTING.md:5",
+      "excerpt": "Sign your commits with a `Signed-off-by` line (DCO). Do not open a PR without review.",
+      "evidence": "pattern_match_inferred"
+    },
+    {
+      "id": "DISCUSS_FIRST_MENTIONED",
+      "meaning": "Maintainers ask for discussion before work",
+      "source": "CONTRIBUTING.md:3",
+      "excerpt": "Please read the issue and keep changes small. Open an issue first to discuss larger changes. Create a branch. Add a test for changes, run th",
+      "evidence": "pattern_match_inferred"
+    },
+    {
+      "id": "TESTS_REQUIRED_MENTIONED",
+      "meaning": "Tests are expected before submitting",
+      "source": "CONTRIBUTING.md:3",
+      "excerpt": "Please read the issue and keep changes small. Open an issue first to discuss larger changes. Create a branch. Add a test for changes, run th",
+      "evidence": "pattern_match_inferred"
+    }
+  ],
+  "package": {
+    "declaredScripts": [
+      "test",
+      "lint"
+    ],
+    "declaredRuntime": {
+      "engines": {
+        "node": ">=20"
+      },
+      "packageManager": "unknown"
+    }
+  },
+  "ecosystems": [
+    "node"
+  ],
+  "runtimeRequirements": [
+    {
+      "tool": "node",
+      "declared": ">=20",
+      "source": "package.json:1"
+    }
+  ],
+  "documentedCommands": [
+    {
+      "command": "npm test",
+      "source": "CONTRIBUTING.md:8",
+      "status": "documented_not_run"
+    },
+    {
+      "command": "npm run lint",
+      "source": "CONTRIBUTING.md:9",
+      "status": "documented_not_run"
+    }
+  ],
+  "ci": {
+    "workflows": []
+  },
+  "untrustedInstructionPatterns": 0,
+  "limitations": [
+    "Only documented default paths are scanned, not every nested file",
+    "No repository scripts, fetched content, or GitHub writes were executed",
+    "Source hashes prove local file identity, not maintainer endorsement",
+    "Policy signals and license detection are text-pattern heuristics, not legal conclusions",
+    "Documented commands are quoted from docs and were not run"
+  ],
+  "recommendations": [],
+  "seal": {
+    "method": "SHA-256 JSON serialization",
+    "hash": "4baaeb6ddb7e105ed1aee887c50159df12c87d158d11a355e268286b000d6b24"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/shahvatsalofficial/contribsutra-ai/schemas/issue-shortlist.schema.json",
+  "title": "contribsutra.issue-shortlist",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "issueSnapshotSha256",
+    "summary",
+    "ranked",
+    "seal"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "kind": {
+      "const": "contribsutra.issue-shortlist"
+    },
+    "seal": {
+      "type": "object",
+      "required": [
+        "hash"
+      ],
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "ranked": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "number",
+          "eligible",
+          "score",
+          "reasons",
+          "warnings",
+          "verification"
+        ],
+        "properties": {
+          "eligible": {
+            "type": "boolean"
+          },
+          "freshness": {
+            "enum": [
+              "unknown",
+              "recent",
+              "stale"
+            ]
+          },
+          "verification": {
+            "const": "metadata_only_not_live_verified"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

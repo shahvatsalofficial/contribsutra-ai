@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "kind",
+    "artifacts",
+    "findings",
+    "seal",
+    "license",
+    "policySignals",
+    "runtimeRequirements"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "kind": {
+      "const": "contribsutra.repository-scan"
+    },
+    "artifacts": {
+      "type": "array"
+    },
+    "findings": {
+      "type": "array"
+    },
+    "seal": {
+      "type": "object",
+      "required": [
+        "hash"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "$id": "https://github.com/shahvatsalofficial/contribsutra-ai/schemas/repository-scan.schema.json"
+}

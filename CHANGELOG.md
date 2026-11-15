@@ -1,0 +1,15 @@
+# Changelog
+
+## 0.2.0 — 2026-11-16
+- **Audit reports:** new `audit` command writes `audit-report.html`, `.md` and `.json` plus `SHA256SUMS.txt`: 30 adversarial safety checks with expected vs observed results, a negative control, evidence tiers and an explicit "not tested" list. All reports now render as real tables (not a `<pre>` dump) in Markdown and HTML.
+- **Scanner:** alternate default locations, license detection, CODEOWNERS, CI workflow inventory, Python/Rust/Go manifests and version pins, `file:line` policy signals (DCO, CLA, AI-assistance, discuss-first), documented commands (quoted, never run), instruction-injection detection in repository docs.
+- **Setup doctor:** probes git, npm, gh, python, cargo, rustc, go, docker; compares declared requirements with installed versions (`satisfied`, `not_satisfied`, `tool_missing`, `cannot_determine`).
+- **Issues:** declines locked, security-sensitive, prompt-injection and closed/assigned issues; flags large scope, missing acceptance criteria, duplicates and staleness (`--as-of`).
+- **Plan / PR:** learning modes, lifecycle state machine, policy reminders; PR packet with four evidence channels and a draft description; AI-assistance disclosure.
+- **CLI:** `--version`, `--json`, `--quiet`, `--force`, `render`, `doctor --root`; stable exit codes; refuses to overwrite outputs.
+- **Fixes:** the CLI did nothing when launched through an npm bin symlink (`npx`); the `npm` probe failed on Windows; symlink tests failed with EPERM on Windows (they now skip honestly); CI used a shell glob that `cmd.exe` does not expand (now a cross-platform runner); server hardened (Host check, security headers, connection caps).
+- **Distribution:** published as `contribsutra-ai` (bins `contribsutra`, `contribsutra-ai`), `llms.txt`, `CITATION.cff`, `NOTICE`, legal/trust docs, complete `documents/` set.
+
+## 0.1.0 — Starter
+- Offline read-only repo scan, issue ranking, learning plan, PR readiness and environment doctor.
+- Portable skills, Claude role definitions, docs, plugin catalog, CI configuration, security controls and tests.

@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>User guide · ContribSutra AI</title><meta name="description" content="ContribSutra AI documentation: offline, evidence-backed open-source contributor onboarding."><style>:root{--bg:#f5f7fa;--card:#fff;--ink:#14202b;--mute:#53636f;--line:#d9e1e8;--brand:#0b6a7a;--brand2:#e8f4f6;--code:#eef2f6;--ok:#13795b;--warn:#a15c00}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1319;--card:#151e27;--ink:#e6edf3;--mute:#9db0be;--line:#27343f;--brand:#53c6d8;--brand2:#12303a;--code:#1b2733;--ok:#4cd6a3;--warn:#f0b254}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--brand)}a:focus-visible,button:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--card);padding:.5rem 1rem;z-index:9}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);min-height:100vh}
+nav.side{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:1.25rem 1rem;border-right:1px solid var(--line);background:var(--card)}
+nav.side .brand{font-weight:700;font-size:1.1rem;color:var(--brand);text-decoration:none;display:block;margin-bottom:.2rem}
+nav.side small{color:var(--mute);display:block;margin-bottom:1rem}
+nav.side a.item{display:block;padding:.35rem .6rem;border-radius:8px;text-decoration:none;color:var(--ink);font-size:.93rem}
+nav.side a.item:hover{background:var(--brand2)}nav.side a.item[aria-current=page]{background:var(--brand2);color:var(--brand);font-weight:600}
+main{max-width:920px;padding:2.5rem 2rem 5rem;width:100%}
+h1{font-size:2rem;line-height:1.2;margin:.2rem 0 1rem}h2{margin-top:2.2rem;padding-bottom:.3rem;border-bottom:1px solid var(--line)}h3{margin-top:1.6rem}
+.scroll{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}th,td{padding:.55rem .75rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--brand2);font-weight:600}tr:last-child td{border-bottom:0}
+pre{background:var(--code);padding:1rem;border-radius:10px;overflow:auto;border:1px solid var(--line);font-size:.88rem}code{background:var(--code);padding:.08rem .35rem;border-radius:5px;font:.9em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.5rem 1rem;border-left:4px solid var(--brand);background:var(--brand2);border-radius:0 8px 8px 0}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line)}
+footer{color:var(--mute);font-size:.85rem;margin-top:2rem}
+.hero{background:linear-gradient(135deg,var(--brand2),var(--card));border:1px solid var(--line);border-radius:16px;padding:2rem;margin-bottom:1.5rem}
+.hero p{font-size:1.1rem;color:var(--mute);max-width:60ch}.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:.15rem .8rem;font-size:.85rem}.chip.ok{color:var(--ok);border-color:var(--ok)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem;text-decoration:none;color:var(--ink);display:block}.card:hover{border-color:var(--brand)}.card b{display:block;color:var(--brand)}.card span{color:var(--mute);font-size:.9rem}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}main{padding:1.5rem 1rem 4rem}}
+@media print{nav.side,.pager,.skip{display:none}.layout{display:block}main{max-width:none}body{background:#fff;color:#000}}</style></head><body><a class="skip" href="#main">Skip to content</a><div class="layout"><nav class="side" aria-label="Documentation"><a class="brand" href="index.html">ContribSutra AI</a><small>v0.2.0 · documentation</small><a class="item" href="01-executive-summary.html">Executive summary</a><a class="item" href="02-functional-specification.html">Functional specification</a><a class="item" href="03-architecture.html">Architecture</a><a class="item" href="04-technical-reference.html">Technical reference</a><a class="item" href="05-user-guide.html" aria-current="page">User guide</a><a class="item" href="06-security-and-privacy.html">Security and privacy</a><a class="item" href="07-evidence-model-and-rules.html">Evidence model and rules</a><a class="item" href="08-test-report.html">Test report</a><a class="item" href="09-operations-and-release.html">Operations and release</a><a class="item" href="10-legal-and-governance.html">Legal and governance</a><a class="item" href="11-roadmap-and-faq.html">Roadmap and FAQ</a><a class="item" href="12-glossary.html">Glossary</a><a class="item" href="13-assurance-and-evidence.html">Assurance and evidence</a><a class="item" href="https://github.com/shahvatsalofficial/contribsutra-ai">GitHub ↗</a></nav><main id="main"><h1 id="user-guide">User guide</h1>
+<p>A walk-through for a first-time contributor. Each step produces something you can read and share.</p>
+<h2 id="1-install-check">1. Install check</h2>
+<pre><code>npx contribsutra-ai --version</code></pre>
+<p>You need Node.js 20 or newer. Nothing else is installed and no account is needed.</p>
+<h2 id="2-see-the-tool-s-own-proof">2. See the tool's own proof</h2>
+<pre><code>npx contribsutra-ai audit --out ./contribsutra-audit</code></pre>
+<p>Open <code>contribsutra-audit/audit-report.html</code>. The verdict and the table of 30 checks show how the tool behaves on hostile input. Start here if you want to decide whether to trust it.</p>
+<h2 id="3-understand-a-repository">3. Understand a repository</h2>
+<p>Clone the project yourself, then:</p>
+<pre><code>npx contribsutra-ai scan --root ./the-repo --out ./reports/scan</code></pre>
+<p>Read <code>reports/scan.html</code>. Look at: which files exist, the license, policy signals (DCO, CLA, AI policy, &quot;discuss first&quot;), the documented commands and any &quot;instruction-like text&quot; finding. Missing files may exist in a place the tool does not check: read the project yourself before concluding.</p>
+<h2 id="4-check-your-machine">4. Check your machine</h2>
+<pre><code>npx contribsutra-ai doctor --root ./the-repo</code></pre>
+<p><code>not_satisfied</code> means the installed version does not match what the project declares. Follow the project's own instructions to fix it. <code>cannot_determine</code> means the version range was in a format the tool will not guess.</p>
+<h2 id="5-choose-an-issue">5. Choose an issue</h2>
+<p>Export open issues with the official GitHub CLI (this is your account, your choice):</p>
+<pre><code>gh issue list --repo OWNER/REPO --state open --limit 100 --json number,title,state,labels,assignees,updatedAt,body &gt; issues.json
+npx contribsutra-ai issues --issues issues.json --skills docs,javascript --as-of 2026-11-16T00:00:00Z --out ./reports/issues</code></pre>
+<p>Read the reasons and the cautions. An issue marked <code>eligible: no</code> was declined for a stated reason. An eligible issue with &quot;Maintainer invitation is not evidenced&quot; still needs a polite question first. A label is not consent.</p>
+<h2 id="6-ask-before-you-start">6. Ask before you start</h2>
+<p>Comment on the issue yourself, in your own words, to say you would like to work on it and confirm it is still wanted. ContribSutra will not do this for you.</p>
+<h2 id="7-make-a-learning-plan">7. Make a learning plan</h2>
+<pre><code>npx contribsutra-ai plan --root ./the-repo --issues issues.json --issue 101 --mode guided --out ./reports/plan</code></pre>
+<p>Modes: <code>guided</code> (hints), <code>collaborative</code> (questions to discuss with a mentor), <code>self-directed</code> (acceptance checks only). Do the steps yourself. The plan never writes the solution.</p>
+<h2 id="8-test-with-the-project-s-own-checks">8. Test with the project's own checks</h2>
+<p>Run the commands the project documents, after reading them. Copy the exact command and output into a file. Failures are useful: record them.</p>
+<h2 id="9-prepare-the-review-packet">9. Prepare the review packet</h2>
+<p>Create <code>evidence.json</code>:</p>
+<pre><code>{&quot;aiAssistance&quot;:&quot;none&quot;,&quot;changedFiles&quot;:[&quot;README.md&quot;],&quot;tests&quot;:[{&quot;name&quot;:&quot;npm test&quot;,&quot;status&quot;:&quot;passed&quot;,&quot;evidenceFile&quot;:&quot;npm-test.log&quot;}]}</code></pre>
+<pre><code>npx contribsutra-ai pr-check --root ./the-repo --issue 101 --evidence evidence.json --out ./reports/pr</code></pre>
+<p>Your &quot;passed&quot; appears as an author claim, not a verified result. That is intentional: it tells the reviewer what to trust. Rewrite the draft description in your own words. Disclose AI assistance if the project asks.</p>
+<h2 id="10-submit-you-not-the-tool">10. Submit (you, not the tool)</h2>
+<p>Open the pull request yourself, link the issue, and answer reviewers politely. &quot;Ready for review&quot; is not &quot;accepted&quot;.</p>
+<h2 id="using-skills-in-your-ide">Using skills in your IDE</h2>
+<pre><code>npx contribsutra-ai install-skills --ide claude --project .</code></pre>
+<p>Hosts: <code>claude</code>, <code>cursor</code>, <code>codex</code>, <code>gemini</code>, <code>copilot</code>, <code>opencode</code>. The command copies files and refuses to overwrite. Whether your IDE activates them is not verified: try asking your agent to &quot;use the contribsutra-repo-onboard skill&quot; and check what happens.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="scroll"><table><thead><tr><th scope="col">Message</th><th scope="col">Meaning and fix</th></tr></thead><tbody><tr><td><code>Report output must be outside the inspected repository</code></td><td>Choose an <code>--out</code> directory elsewhere</td></tr><tr><td><code>Refusing to overwrite ...</code></td><td>Add <code>--force</code> or pick a new name</td></tr><tr><td><code>Source file too large</code></td><td>A document exceeded 256 KiB; the tool refuses rather than guess</td></tr><tr><td><code>Issue snapshot must be an array</code></td><td>The file must be a bare JSON array, as <code>gh issue list --json</code> produces</td></tr><tr><td><code>Requested issue is not present in snapshot</code></td><td>Check the number in <code>issues.json</code></td></tr><tr><td>Exit code 1 from <code>verify</code></td><td>The report was changed after it was written, or sources changed</td></tr></tbody></table></div><div class="pager"><a href="04-technical-reference.html">← Technical reference</a><a href="06-security-and-privacy.html">Security and privacy →</a></div><footer>ContribSutra AI 0.2.0 · created by Vatsal Shah · Apache-2.0 · generated 2026-11-15 · figures from the recorded test run of 2026-11-15T20:13:41.044Z</footer></main></div></body></html>
