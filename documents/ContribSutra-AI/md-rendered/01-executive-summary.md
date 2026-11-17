@@ -1,6 +1,6 @@
 # Executive summary
 
-ContribSutra AI helps a first-time open-source contributor become a respectful, capable contributor, and helps maintainers receive fewer, better, more reviewable contributions. Version 0.2.0 is a working, offline command-line tool plus 25 portable agent skills.
+ContribSutra AI helps a first-time open-source contributor become a respectful, capable contributor, and helps maintainers receive fewer, better, more reviewable contributions. Version 0.2.1 is a working, offline command-line tool plus 25 portable agent skills.
 
 ## The problem
 
@@ -36,7 +36,7 @@ Lower time to a first useful contribution without rewarding spam; less maintaine
 
 | Item | State |
 |---|---|
-| Version | 0.2.0 |
+| Version | 0.2.1 |
 | License | Apache-2.0 |
 | Runtime dependencies | 0 |
 | Network access | None in the CLI |

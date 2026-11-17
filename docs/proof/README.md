@@ -4,9 +4,9 @@ Regenerate: `npm run proof`. These files are machine output, not hand-written.
 
 | Field | Value |
 |---|---|
-| Tool | contribsutra-ai 0.2.0 |
+| Tool | contribsutra-ai 0.2.1 |
 | Node / platform | v24.15.0 · win32/x64 |
-| Recorded | 2026-11-15T20:13:41.044Z |
+| Recorded | 2026-11-17T17:19:18.516Z |
 | Tests | 104 |
 | Passed | 100 |
 | Failed | 0 |

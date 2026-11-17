@@ -31,4 +31,4 @@ _Issue state is from an offline snapshot, not live GitHub verification. A label 
 - Issue bodies are scanned for risk but never copied into reports
 
 ---
-ContribSutra AI 0.2.0 · created by Vatsal Shah · Apache-2.0
+ContribSutra AI 0.2.1 · created by Vatsal Shah · Apache-2.0

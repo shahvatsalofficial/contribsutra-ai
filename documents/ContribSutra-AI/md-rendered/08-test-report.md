@@ -6,10 +6,10 @@ Figures below are filled in from the recorded run in `test-results/` (raw TAP lo
 
 | Field | Value |
 |---|---|
-| Tool version | 0.2.0 |
+| Tool version | 0.2.1 |
 | Node.js | v24.15.0 |
 | Platform | win32/x64 |
-| Recorded | 2026-11-15T20:13:41.044Z |
+| Recorded | 2026-11-17T17:19:18.516Z |
 | Tests | 104 |
 | Passed | 100 |
 | Failed | 0 |

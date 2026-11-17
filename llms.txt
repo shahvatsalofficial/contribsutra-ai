@@ -8,7 +8,7 @@ ContribSutra never opens PRs, comments, assigns issues or runs a repository's sc
 - `npx contribsutra-ai --version` (npm package: contribsutra-ai; binaries: contribsutra, contribsutra-ai)
 - `npx contribsutra-ai audit --out ./audit` writes audit-report.html, audit-report.md, audit-report.json, SHA256SUMS.txt
 - Commands: doctor, scan, issues, plan, pr-check, verify, render, audit, install-skills, serve, demo
-- Node.js 20+, zero runtime dependencies, no API keys, no network access
+- Node.js 22+, zero runtime dependencies, no API keys, no network access
 
 ## Docs
 - [README](README.md)

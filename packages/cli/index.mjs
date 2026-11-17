@@ -8,7 +8,7 @@ import {environmentDoctor} from '../core/doctor.mjs';
 import {loadIssueSnapshot, rankIssues} from '../core/issues.mjs';
 import {createLearningPlan, checkPullRequest} from '../core/plan.mjs';
 import {readReport, verifyReport} from '../core/verify.mjs';
-import {enforceOutputOutside, existingRoot, parsedJSON, sha256, checkSeal} from '../core/util.mjs';
+import {enforceOutputOutside, existingRoot, parsedJSON, sha256, checkSeal, reportSeal} from '../core/util.mjs';
 import {asFileFormats, renderMarkdown, renderHtml} from '../reporting/index.mjs';
 import {installSkills} from '../core/install.mjs';
 import {runAudit} from '../core/audit.mjs';
@@ -140,12 +140,10 @@ export async function main(argv = process.argv.slice(2)) {
       const {summary, artifacts} = await runAudit({root, issuesFile: opts.issues});
       await mkdir(dir, {recursive: true});
       const sums = [];
-      const put = async (name, text) => { await writeFile(path.join(dir, name), text, opts.force ? {flag: 'w'} : {flag: 'w'}); sums.push(`${sha256(Buffer.from(text))}  ${name}`); };
+      const put = async (name, text) => { await writeFile(path.join(dir, name), text); sums.push(`${sha256(Buffer.from(text))}  ${name}`); };
       for (const [name, art] of Object.entries(artifacts)) await put(name, JSON.stringify(art, null, 2) + '\n');
       const withHashes = {...summary, artifacts: Object.fromEntries(sums.map(l => { const [h, n] = l.split('  '); return [n, h]; }))};
-      const sealed = {...withHashes}; // hashes added after sealing the findings: re-seal so the file is self-consistent
-      const {reportSeal} = await import('../core/util.mjs');
-      const final = reportSeal(sealed);
+      const final = reportSeal(withHashes); // artifact hashes added after sealing: re-seal so the file is self-consistent
       await put('audit-report.json', JSON.stringify(final, null, 2) + '\n');
       await put('audit-report.md', renderMarkdown(final));
       await put('audit-report.html', renderHtml(final));

@@ -21,7 +21,7 @@ function atom(version, token) {
   const op = m[1] || '', want = m[2].replace(/\.(x|\*)/gi, '').split('.').map(Number);
   const c = cmp(version, want);
   if (op === '>=') return c >= 0; if (op === '>') return c > 0; if (op === '<=') return c <= 0; if (op === '<') return c < 0;
-  if (op === '^') return c >= 0 && version[0] === want[0] || (want[0] === 0 && c >= 0 && version[0] === 0 && version[1] === (want[1] ?? 0));
+  if (op === '^') return c >= 0 && (want[0] > 0 ? version[0] === want[0] : version[0] === 0 && version[1] === (want[1] ?? 0));
   if (op === '~') return c >= 0 && version[0] === want[0] && version[1] === (want[1] ?? version[1]);
   // bare "20" / "20.x" / "3.11": same prefix; "3.11.2" must match all given parts.
   return want.every((n, i) => version[i] === n);

@@ -5,7 +5,7 @@
 | Phase | Scope | State |
 |---|---|---|
 | 0 | Truthful baseline: inspect, test, fix regressions | Done |
-| 1 | Robust no-key core: scan with line sources, doctor with requirement comparison, adversarial issue handling, audit pack | Done in 0.2.0 |
+| 1 | Robust no-key core: scan with line sources, doctor with requirement comparison, adversarial issue handling, audit pack | Done in 0.2.1 |
 | 2 | Developer environment: safe git change summary, Dev Container checks, opt-in sandboxed test runner with captured output | Next |
 | 3 | GitHub read-only: paginated issues, ETags, rate limits, staleness display | Planned |
 | 4 | Quality and learning: richer opt-in explanations, patch review with attributable evidence | Planned |

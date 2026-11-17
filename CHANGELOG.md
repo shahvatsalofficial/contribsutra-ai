@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1 — 2026-11-17
+- **Runtime:** requires Node.js 22+ (Node 20 is end-of-life). CI matrix: Node 22, 24, 26 on Linux; 22 and 24 on Windows; 24 on macOS.
+- **CI supply chain:** GitHub Actions pinned to commit SHAs of the latest majors (checkout v7.0.1, setup-node v7.1.0, upload-artifact v7.0.2).
+- **Docs site:** GitHub Pages workflow publishes the documentation set at https://shahvatsalofficial.github.io/contribsutra-ai/.
+- **Fixes:** caret range (`^0.x`) matching in the setup doctor; simplified audit output writer.
+- **Environment:** tests that need symlinks skip (never fail) on hosts that forbid them.
+
 ## 0.2.0 — 2026-11-16
 - **Audit reports:** new `audit` command writes `audit-report.html`, `.md` and `.json` plus `SHA256SUMS.txt`: 30 adversarial safety checks with expected vs observed results, a negative control, evidence tiers and an explicit "not tested" list. All reports now render as real tables (not a `<pre>` dump) in Markdown and HTML.
 - **Scanner:** alternate default locations, license detection, CODEOWNERS, CI workflow inventory, Python/Rust/Go manifests and version pins, `file:line` policy signals (DCO, CLA, AI-assistance, discuss-first), documented commands (quoted, never run), instruction-injection detection in repository docs.
