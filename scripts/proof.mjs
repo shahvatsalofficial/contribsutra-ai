@@ -13,7 +13,7 @@ import {scanRepository} from '../packages/core/scan.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(root, 'docs', 'proof');
 fs.mkdirSync(out, {recursive: true});
-const run = args => spawnSync(process.execPath, args, {cwd: root, encoding: 'utf8', timeout: 300000});
+const run = args => spawnSync(process.execPath, args, {cwd: root, encoding: 'utf8', timeout: 1500000});
 
 const tap = run(['--test', '--test-reporter=tap', ...fs.readdirSync(path.join(root, 'tests')).filter(f => f.endsWith('.test.mjs')).sort().map(f => 'tests/' + f)]);
 fs.writeFileSync(path.join(out, 'test-run.tap'), tap.stdout);

@@ -1,14 +1,14 @@
 # ContribSutra AI — Independent Audit Report
 
 **Schema:** 1.0  
-**Integrity:** SHA-256 seal verified (67acebabfd417830…)  
+**Integrity:** SHA-256 seal verified (1e96ab76b2223cb2…)  
 **Trust boundary:** Imported content is untrusted. No GitHub writes, network calls or repository scripts were executed.  
 
 > **Verdict: READY_FOR_HUMAN_REVIEW** — ASSURANCE_FAILED if any safety-gate check fails; GAPS_FOUND if the repository lacks important onboarding files or contains instruction-like text; otherwise READY_FOR_HUMAN_REVIEW. This tool never emits "approved": only a maintainer can appr
 
-**Tool:** ContribSutra AI 0.2.1  
+**Tool:** ContribSutra AI 0.2.2  
 **Audited repository:** demo-repo  
-**Recorded:** 2026-11-17T17:19:55.072Z  
+**Recorded:** 2026-11-25T14:21:04.484Z  
 **Environment:** Node v24.15.0 · win32/x64  
 **Assurance checks:** 29 passed · 0 failed · 1 skipped of 30  
 
@@ -99,4 +99,4 @@
 _No tool can approve a contribution. A SHA-256 seal detects accidental change; it is not a signature and does not prove origin._
 
 ---
-ContribSutra AI 0.2.1 · created by Vatsal Shah · Apache-2.0
+ContribSutra AI 0.2.2 · created by Vatsal Shah · Apache-2.0

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2 — 2026-11-25
+- **Documentation site rebuilt:** a real website at https://shahvatsalofficial.github.io/contribsutra-ai/ with a landing page, light theme by default plus a remembered dark toggle, responsive desktop and mobile layouts, search, and 15 pages.
+- **Visuals:** 9 theme-aware diagrams (pipeline, lifecycle, trust boundaries, evidence channels, issue triage, audit, architecture, CI gate, skills), charts generated from real runs, and 9 step-by-step real-world scenario flowcharts.
+- **New pages:** Overview, Quick start, Real-world scenarios, Architecture (diagram-led).
+- **Fix:** the setup doctor could hang for minutes when a tool launcher spawned a child process (seen with the Windows Store python alias). Probe output now goes to a temporary file with a hard 10-second timeout per tool, and results are cached per run.
+- **Tests:** documentation tests check link integrity, placeholders, diagram roles, light default and claim honesty.
+
 ## 0.2.1 — 2026-11-17
 - **Runtime:** requires Node.js 22+ (Node 20 is end-of-life). CI matrix: Node 22, 24, 26 on Linux; 22 and 24 on Windows; 24 on macOS.
 - **CI supply chain:** GitHub Actions pinned to commit SHAs of the latest majors (checkout v7.0.1, setup-node v7.1.0, upload-artifact v7.0.2).

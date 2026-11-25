@@ -79,4 +79,4 @@ Addresses #101. (Replace with one sentence in your own words.)
 ```
 
 ---
-ContribSutra AI 0.2.1 · created by Vatsal Shah · Apache-2.0
+ContribSutra AI 0.2.2 · created by Vatsal Shah · Apache-2.0

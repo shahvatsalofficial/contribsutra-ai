@@ -1,7 +1,0 @@
-{
-  "issueCases": 3000,
-  "issueUnexpected": 0,
-  "docCases": 300,
-  "docUnexpected": 0,
-  "note": "Seeded (11) random hostile issue snapshots and README/CONTRIBUTING/package.json text. \"Unexpected\" counts TypeError/RangeError/non-Error throws; a clean Error rejection is acceptable behaviour. Not a coverage-guided fuzzer."
-}

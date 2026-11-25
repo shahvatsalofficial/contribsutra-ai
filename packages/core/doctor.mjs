@@ -1,18 +1,34 @@
-import {execFileSync} from 'node:child_process';
+import {spawnSync} from 'node:child_process';
+import {mkdtempSync, openSync, closeSync, readFileSync, rmSync} from 'node:fs';
 import os from 'node:os';
+import path from 'node:path';
 import {reportSeal, safeText} from './util.mjs';
 
 const NOT_FOUND = 'not found or failed';
+const PROBE_TIMEOUT_MS = 10000;
 // Fixed binaries and fixed arguments only: no repository-controlled string ever reaches a process.
 const PROBES = [['git', ['--version']], ['npm', ['--version']], ['gh', ['--version']], ['python3', ['--version']], ['python', ['--version']], ['cargo', ['--version']], ['rustc', ['--version']], ['go', ['version']], ['docker', ['--version']]];
 
+// Output goes to a temp file, not a pipe: if a probe spawns a grandchild (for example the Windows Store python
+// alias) and the timeout kills only the direct child, a pipe would keep the caller blocked until the grandchild exits.
 function binaryVersion(bin, args = ['--version']) {
+  let dir;
   try {
     // npm is a .cmd shim on Windows; Node refuses to spawn it directly. Route it through cmd.exe with constant arguments.
     const [file, argv] = process.platform === 'win32' && bin === 'npm' ? ['cmd.exe', ['/d', '/c', 'npm', '--version']] : [bin, args];
-    return safeText(execFileSync(file, argv, {encoding: 'utf8', timeout: 8000, stdio: ['ignore', 'pipe', 'ignore']}).trim().split(/\r?\n/)[0]);
+    dir = mkdtempSync(path.join(os.tmpdir(), 'cs-probe-'));
+    const outFile = path.join(dir, 'out.txt');
+    const fd = openSync(outFile, 'w');
+    let r;
+    try { r = spawnSync(file, argv, {timeout: PROBE_TIMEOUT_MS, stdio: ['ignore', fd, 'ignore'], windowsHide: true}); } finally { closeSync(fd); }
+    if (r.error || r.status !== 0) return NOT_FOUND;
+    return safeText(readFileSync(outFile, 'utf8').trim().split(String.fromCharCode(10))[0].trim()) || NOT_FOUND;
   } catch { return NOT_FOUND; }
+  finally { if (dir) rmSync(dir, {recursive: true, force: true}); }
 }
+// Versions do not change during one run; probing once keeps slow or hanging shims from being paid repeatedly.
+const cache = new Map();
+const probe = (bin, args) => cache.get(bin) ?? cache.set(bin, binaryVersion(bin, args)).get(bin);
 const parts = v => String(v).replace(/^v/i, '').match(/\d+/g)?.slice(0, 3).map(Number) ?? null;
 function cmp(a, b) { for (let i = 0; i < 3; i++) { const d = (a[i] ?? 0) - (b[i] ?? 0); if (d) return d; } return 0; }
 function atom(version, token) {
@@ -41,7 +57,7 @@ function installedVersion(tool, tools) {
 
 export function environmentDoctor({requirements = []} = {}) {
   const tools = {};
-  for (const [bin, args] of PROBES) tools[bin] = binaryVersion(bin, args);
+  for (const [bin, args] of PROBES) tools[bin] = probe(bin, args);
   const recommendations = [];
   if (tools.git === NOT_FOUND) recommendations.push('Git not available from PATH; consult official https://git-scm.com/downloads for your OS and rerun doctor');
   if (tools.npm === NOT_FOUND) recommendations.push('npm not available from PATH; check a supported Node.js installation and official https://nodejs.org/en/download instructions');

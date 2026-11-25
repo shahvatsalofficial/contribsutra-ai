@@ -1,0 +1,340 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "contribsutra.audit-report",
+  "toolVersion": "0.2.2",
+  "recordedAt": "2026-11-25T14:20:23.609Z",
+  "verdict": "READY_FOR_HUMAN_REVIEW",
+  "verdictRule": "ASSURANCE_FAILED if any safety-gate check fails; GAPS_FOUND if the repository lacks important onboarding files or contains instruction-like text; otherwise READY_FOR_HUMAN_REVIEW. This tool never emits \"approved\": only a maintainer can approve a contribution.",
+  "subject": {
+    "repository": "demo-repo",
+    "issueSnapshotSha256": "12e9ce84297ab4ffdbfb1cf6cf0997bbf93e59c1324d414418f4ae60adb91ee6"
+  },
+  "environment": {
+    "node": "v24.15.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "findings": [
+    {
+      "id": "MISSING_SECURITY",
+      "severity": "advisory",
+      "path": "SECURITY.md",
+      "detail": "Private reporting channel for vulnerabilities not located at a supported default path (SECURITY.md, .github/SECURITY.md, docs/SECURITY.md); it may be provided elsewhere"
+    },
+    {
+      "id": "MISSING_ISSUE_TEMPLATE",
+      "severity": "advisory",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "detail": "Issue reporting template not located at a supported default path (.github/ISSUE_TEMPLATE/bug_report.md, .github/ISSUE_TEMPLATE/config.yml, .github/ISSUE_TEMPLATE.md); it may be provided elsewhere"
+    },
+    {
+      "id": "MISSING_CODEOWNERS",
+      "severity": "advisory",
+      "path": ".github/CODEOWNERS",
+      "detail": "Review ownership map not located at a supported default path (.github/CODEOWNERS, CODEOWNERS, docs/CODEOWNERS); it may be provided elsewhere"
+    },
+    {
+      "id": "MISSING_AGENTS",
+      "severity": "advisory",
+      "path": "AGENTS.md",
+      "detail": "AI coding guidance not located at a supported default path (AGENTS.md); it may be provided elsewhere"
+    },
+    {
+      "id": "MISSING_CLAUDE",
+      "severity": "advisory",
+      "path": "CLAUDE.md",
+      "detail": "Claude-specific contributor guidance not located at a supported default path (CLAUDE.md); it may be provided elsewhere"
+    }
+  ],
+  "assurance": {
+    "total": 30,
+    "passed": 29,
+    "failed": 0,
+    "skipped": 1,
+    "checks": [
+      {
+        "id": "A01",
+        "title": "Closed issue labelled \"good first issue\" is declined",
+        "expected": "eligible=false",
+        "observed": "eligible=false",
+        "result": "pass"
+      },
+      {
+        "id": "A02",
+        "title": "Security-sensitive issue marked \"help wanted\" is declined",
+        "expected": "eligible=false",
+        "observed": "eligible=false",
+        "result": "pass"
+      },
+      {
+        "id": "A03",
+        "title": "Assigned issue is declined",
+        "expected": "eligible=false",
+        "observed": "eligible=false",
+        "result": "pass"
+      },
+      {
+        "id": "A04",
+        "title": "Prompt-injection issue body is declined and never echoed",
+        "expected": "eligible=false; report lacks injected text",
+        "observed": "eligible=false; echoed=false",
+        "result": "pass"
+      },
+      {
+        "id": "A05",
+        "title": "Large task with an inviting title is flagged and not ranked first",
+        "expected": "warning present; not rank 1",
+        "observed": "warnings=1; first=#210",
+        "result": "pass"
+      },
+      {
+        "id": "A06",
+        "title": "Issue without acceptance criteria is flagged",
+        "expected": "warning present",
+        "observed": "flagged",
+        "result": "pass"
+      },
+      {
+        "id": "A07",
+        "title": "Stale issue is flagged against the stated as-of date",
+        "expected": "freshness=stale",
+        "observed": "freshness=stale",
+        "result": "pass"
+      },
+      {
+        "id": "A08",
+        "title": "Possible duplicate is flagged",
+        "expected": "duplicate warning",
+        "observed": "flagged",
+        "result": "pass"
+      },
+      {
+        "id": "A09",
+        "title": "Unlabeled issue triggers \"ask first\" warning",
+        "expected": "maintainer-invitation warning",
+        "observed": "warning present",
+        "result": "pass"
+      },
+      {
+        "id": "A10",
+        "title": "Genuine beginner issue is recommended first",
+        "expected": "rank 1 = #210",
+        "observed": "first=#210",
+        "result": "pass"
+      },
+      {
+        "id": "A11",
+        "title": "Duplicate issue numbers are rejected",
+        "expected": "error",
+        "observed": "rejected: Issue number must be a unique positive integer",
+        "result": "pass"
+      },
+      {
+        "id": "A12",
+        "title": "Secrets in titles are redacted",
+        "expected": "no token in output",
+        "observed": "leak [REDACTED_TOKEN]",
+        "result": "pass"
+      },
+      {
+        "id": "B01",
+        "title": "Path traversal (\"..\") is refused",
+        "expected": "error",
+        "observed": "rejected: Unsafe source path",
+        "result": "pass"
+      },
+      {
+        "id": "B02",
+        "title": "Absolute source path is refused",
+        "expected": "error",
+        "observed": "rejected: Unsafe source path",
+        "result": "pass"
+      },
+      {
+        "id": "B03",
+        "title": "Symlinked repository root is refused",
+        "expected": "error (or skipped when the OS forbids symlinks)",
+        "observed": "symlink not permitted on this host (EPERM)",
+        "result": "skipped"
+      },
+      {
+        "id": "B04",
+        "title": "Report output inside the inspected repository is refused",
+        "expected": "error",
+        "observed": "rejected: Report output must be outside the inspected repository; use a separate reports d",
+        "result": "pass"
+      },
+      {
+        "id": "B05",
+        "title": "Oversized source file is refused",
+        "expected": "error",
+        "observed": "rejected: Source file too large: README.md",
+        "result": "pass"
+      },
+      {
+        "id": "C01",
+        "title": "Tampered report fails integrity check",
+        "expected": "integrity=MISMATCH",
+        "observed": "integrity=MISMATCH",
+        "result": "pass"
+      },
+      {
+        "id": "C02",
+        "title": "Changed source file is reported stale",
+        "expected": "STALE_OR_MISSING",
+        "observed": "STALE_OR_MISSING",
+        "result": "pass"
+      },
+      {
+        "id": "C03",
+        "title": "Scan is deterministic and does not modify the repository",
+        "expected": "identical output",
+        "observed": "4baaeb6ddb7e105e",
+        "result": "pass"
+      },
+      {
+        "id": "D01",
+        "title": "Invented test status stays \"not_run\"",
+        "expected": "not_run",
+        "observed": "not_run",
+        "result": "pass"
+      },
+      {
+        "id": "D02",
+        "title": "User-claimed pass is never labelled verified",
+        "expected": "unverified_external_claim",
+        "observed": "unverified_external_claim; HUMAN_REVIEW_REQUIRED",
+        "result": "pass"
+      },
+      {
+        "id": "D03",
+        "title": "PR readiness performs zero external writes",
+        "expected": "externalWrites=0",
+        "observed": "externalWrites=0",
+        "result": "pass"
+      },
+      {
+        "id": "D04",
+        "title": "Learning plan never claims execution",
+        "expected": "PLANNED_NOT_EXECUTED",
+        "observed": "PLANNED_NOT_EXECUTED",
+        "result": "pass"
+      },
+      {
+        "id": "D05",
+        "title": "Plan for a declined issue is marked blocked",
+        "expected": "blocked=true",
+        "observed": "blocked=true",
+        "result": "pass"
+      },
+      {
+        "id": "E01",
+        "title": "HTML report escapes untrusted markup",
+        "expected": "no <script> element",
+        "observed": "escaped",
+        "result": "pass"
+      },
+      {
+        "id": "E02",
+        "title": "Secret patterns are redacted",
+        "expected": "no token, email or key",
+        "observed": "[REDACTED_TOKEN] [REDACTED_EMAIL] password=[REDACTED] [REDACTED_TOKEN]",
+        "result": "pass"
+      },
+      {
+        "id": "F01",
+        "title": "Local server rejects a missing token",
+        "expected": "401",
+        "observed": "no token=401; valid token=200; POST=405",
+        "result": "pass"
+      },
+      {
+        "id": "G01",
+        "title": "Negative control: an empty repository is flagged, not blessed",
+        "expected": "important gaps found",
+        "observed": "3 important gaps",
+        "result": "pass"
+      },
+      {
+        "id": "G02",
+        "title": "Negative control: instruction-like text in a README is flagged",
+        "expected": "UNTRUSTED_INSTRUCTION_PATTERN",
+        "observed": "1 pattern(s)",
+        "result": "pass"
+      }
+    ]
+  },
+  "samples": [
+    {
+      "capability": "Repository scan",
+      "result": "6 files hashed; 5 findings; license MIT"
+    },
+    {
+      "capability": "Setup doctor",
+      "result": "5 of 9 probed tools found; 1 requirement(s) compared"
+    },
+    {
+      "capability": "Issue shortlist",
+      "result": "3 eligible, 3 declined of 6; first recommendation #101"
+    },
+    {
+      "capability": "Learning plan",
+      "result": "6 steps; status PLANNED_NOT_EXECUTED"
+    },
+    {
+      "capability": "PR readiness",
+      "result": "gate HUMAN_REVIEW_REQUIRED; 2 statements; externalWrites 0"
+    }
+  ],
+  "evidence": [
+    {
+      "artifact": "repository-scan.json",
+      "tier": "VERIFIED_LOCAL_HASH",
+      "proves": "Which files existed at the scan path and their SHA-256 at scan time",
+      "doesNotProve": "That the files are correct, current upstream, or maintainer-approved"
+    },
+    {
+      "artifact": "policy signals / license",
+      "tier": "INFERRED_HEURISTIC",
+      "proves": "A line of text matched a pattern (quoted with line number)",
+      "doesNotProve": "Legal meaning or the maintainer's present intent"
+    },
+    {
+      "artifact": "issue-shortlist.json",
+      "tier": "OFFLINE_SNAPSHOT",
+      "proves": "How a supplied snapshot ranks under stated rules",
+      "doesNotProve": "That an issue is still open, unassigned or welcome today"
+    },
+    {
+      "artifact": "environment-doctor.json",
+      "tier": "VERIFIED_LOCAL_PROBE",
+      "proves": "Versions reported by fixed --version probes on this host",
+      "doesNotProve": "That the project builds or its tests pass"
+    },
+    {
+      "artifact": "pr-readiness.json",
+      "tier": "NOT_RUN",
+      "proves": "Which claims are unverified and which gates remain",
+      "doesNotProve": "That any test passed: ContribSutra does not run tests"
+    }
+  ],
+  "notTested": [
+    "Native activation of the skills inside Claude Code, Cursor, Codex, Gemini CLI or Copilot (copying files is verified; host execution is not)",
+    "Live GitHub state (issue status, assignment, maintainer intent): no network access is used",
+    "Execution of any target repository script or test suite",
+    "Windows, macOS and Linux results beyond the host named in this report: see the CI matrix for other hosts",
+    "Legal sufficiency of detected licenses or policy text",
+    "Real-world adoption, maintainer satisfaction or contribution acceptance rates: not measured"
+  ],
+  "artifacts": {
+    "repository-scan.json": "efad3dd8c0be77fe99e9d7a9504b57416bacc53a6de8a06e8e092431a9baa3aa",
+    "environment-doctor.json": "7e71c309f3f0657921558e066ffb429b4861598bde856d5337d1d1cd121bea5a",
+    "issue-shortlist.json": "649945e764de95e1fd186f59b34f8a554504ddd6a5afc88402324dde2711a2b3",
+    "learning-plan.json": "b4fda52764fc0c48c9bcf92853da224d7adbc1fe576d140bdbb79130f0ff143e",
+    "pr-readiness.json": "9100a382ad5d881d6bf0c3f04446471c70843b310b28d1e7cf688682cfcde44b"
+  },
+  "seal": {
+    "method": "SHA-256 JSON serialization",
+    "hash": "0138580ff95b90762513a90c6325961228e076ca13327840aa4a466573a93780"
+  }
+}

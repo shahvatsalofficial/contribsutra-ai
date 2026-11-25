@@ -1,0 +1,683 @@
+TAP version 13
+# Subtest: scan finds known repository files
+ok 1 - scan finds known repository files
+  ---
+  duration_ms: 79.8557
+  type: 'test'
+  ...
+# Subtest: readme sha is correct
+ok 2 - readme sha is correct
+  ---
+  duration_ms: 35.9906
+  type: 'test'
+  ...
+# Subtest: scan reports missing security guidance without claiming to know other paths
+ok 3 - scan reports missing security guidance without claiming to know other paths
+  ---
+  duration_ms: 37.7445
+  type: 'test'
+  ...
+# Subtest: scan only records script names, not executes scripts
+ok 4 - scan only records script names, not executes scripts
+  ---
+  duration_ms: 40.1773
+  type: 'test'
+  ...
+# Subtest: scan is deterministic
+ok 5 - scan is deterministic
+  ---
+  duration_ms: 79.4969
+  type: 'test'
+  ...
+# Subtest: scan does not mutate inspected repository
+ok 6 - scan does not mutate inspected repository
+  ---
+  duration_ms: 49.176
+  type: 'test'
+  ...
+# Subtest: scan missing contributing guide
+ok 7 - scan missing contributing guide
+  ---
+  duration_ms: 125.6112
+  type: 'test'
+  ...
+# Subtest: source path does not permit ..
+ok 8 - source path does not permit ..
+  ---
+  duration_ms: 5.3373
+  type: 'test'
+  ...
+# Subtest: source path disallows absolute
+ok 9 - source path disallows absolute
+  ---
+  duration_ms: 0.6339
+  type: 'test'
+  ...
+# Subtest: scan rejects symlinked documentation
+ok 10 - scan rejects symlinked documentation # SKIP symlink creation not permitted here (EPERM)
+  ---
+  duration_ms: 15.6118
+  type: 'test'
+  ...
+# Subtest: scan rejects large source
+ok 11 - scan rejects large source
+  ---
+  duration_ms: 24.6543
+  type: 'test'
+  ...
+# Subtest: scan rejects invalid package file
+ok 12 - scan rejects invalid package file
+  ---
+  duration_ms: 103.4056
+  type: 'test'
+  ...
+# Subtest: source root checks symlinked directory
+ok 13 - source root checks symlinked directory # SKIP symlink creation not permitted here (EPERM)
+  ---
+  duration_ms: 6.4914
+  type: 'test'
+  ...
+# Subtest: seal validates untouched report
+ok 14 - seal validates untouched report
+  ---
+  duration_ms: 0.9083
+  type: 'test'
+  ...
+# Subtest: seal rejects tampering
+ok 15 - seal rejects tampering
+  ---
+  duration_ms: 0.3729
+  type: 'test'
+  ...
+# Subtest: reports flag stale source modification
+ok 16 - reports flag stale source modification
+  ---
+  duration_ms: 108.0271
+  type: 'test'
+  ...
+# Subtest: reports can verify unchanged source
+ok 17 - reports can verify unchanged source
+  ---
+  duration_ms: 56.99
+  type: 'test'
+  ...
+# Subtest: sanitize common secrets
+ok 18 - sanitize common secrets
+  ---
+  duration_ms: 1.0129
+  type: 'test'
+  ...
+# Subtest: safeText removes newlines and limits
+ok 19 - safeText removes newlines and limits
+  ---
+  duration_ms: 0.5394
+  type: 'test'
+  ...
+# Subtest: output inside repository prohibited
+ok 20 - output inside repository prohibited
+  ---
+  duration_ms: 0.633
+  type: 'test'
+  ...
+# Subtest: issue loading contains source hash
+ok 21 - issue loading contains source hash
+  ---
+  duration_ms: 3.2499
+  type: 'test'
+  ...
+# Subtest: issue shortlist ranks maintainer labeled items
+ok 22 - issue shortlist ranks maintainer labeled items
+  ---
+  duration_ms: 9.5863
+  type: 'test'
+  ...
+# Subtest: issue shortlist excludes closed, assigned, restricted
+ok 23 - issue shortlist excludes closed, assigned, restricted
+  ---
+  duration_ms: 4.7804
+  type: 'test'
+  ...
+# Subtest: issue without invitation warns
+ok 24 - issue without invitation warns
+  ---
+  duration_ms: 0.5951
+  type: 'test'
+  ...
+# Subtest: issue duplicate numbers rejected
+ok 25 - issue duplicate numbers rejected
+  ---
+  duration_ms: 0.4948
+  type: 'test'
+  ...
+# Subtest: issue invalid numbers rejected
+ok 26 - issue invalid numbers rejected
+  ---
+  duration_ms: 1.1826
+  type: 'test'
+  ...
+# Subtest: issue titles are secret redacted
+ok 27 - issue titles are secret redacted
+  ---
+  duration_ms: 0.9907
+  type: 'test'
+  ...
+# Subtest: issue report excludes raw issue bodies
+ok 28 - issue report excludes raw issue bodies
+  ---
+  duration_ms: 6.8213
+  type: 'test'
+  ...
+# Subtest: issue report is reproducible
+ok 29 - issue report is reproducible
+  ---
+  duration_ms: 2.2674
+  type: 'test'
+  ...
+# Subtest: learning plan requires selected issue
+ok 30 - learning plan requires selected issue
+  ---
+  duration_ms: 37.8817
+  type: 'test'
+  ...
+# Subtest: learning plan has steps and no false validation
+ok 31 - learning plan has steps and no false validation
+  ---
+  duration_ms: 42.8719
+  type: 'test'
+  ...
+# Subtest: PR review never claims user tests are verified
+ok 32 - PR review never claims user tests are verified
+  ---
+  duration_ms: 39.4635
+  type: 'test'
+  ...
+# Subtest: PR review missing tests is explicitly not-run
+ok 33 - PR review missing tests is explicitly not-run
+  ---
+  duration_ms: 42.9475
+  type: 'test'
+  ...
+# Subtest: PR review requires issue reference
+ok 34 - PR review requires issue reference
+  ---
+  duration_ms: 58.9471
+  type: 'test'
+  ...
+# Subtest: environment doctor records only bounded fields
+ok 35 - environment doctor records only bounded fields
+  ---
+  duration_ms: 16153.8328
+  type: 'test'
+  ...
+# Subtest: markdown render contains proof status
+ok 36 - markdown render contains proof status
+  ---
+  duration_ms: 84.0174
+  type: 'test'
+  ...
+# Subtest: html render escapes injected tag
+ok 37 - html render escapes injected tag
+  ---
+  duration_ms: 3.0636
+  type: 'test'
+  ...
+# Subtest: supported IDEs have target locations
+ok 38 - supported IDEs have target locations
+  ---
+  duration_ms: 0.4042
+  type: 'test'
+  ...
+# Subtest: skill installer copies files to new project
+ok 39 - skill installer copies files to new project
+  ---
+  duration_ms: 2142.003
+  type: 'test'
+  ...
+# Subtest: skill installer does not overwrite existing skills
+ok 40 - skill installer does not overwrite existing skills
+  ---
+  duration_ms: 1653.7951
+  type: 'test'
+  ...
+# Subtest: skill installer rejects unknown IDE
+ok 41 - skill installer rejects unknown IDE
+  ---
+  duration_ms: 2.3253
+  type: 'test'
+  ...
+# Subtest: skill installer refuses directory symlink
+ok 42 - skill installer refuses directory symlink # SKIP symlink creation not permitted here (EPERM)
+  ---
+  duration_ms: 10.6819
+  type: 'test'
+  ...
+# Subtest: localhost report endpoint rejects unauthorized access
+ok 43 - localhost report endpoint rejects unauthorized access
+  ---
+  duration_ms: 438.7372
+  type: 'test'
+  ...
+# Subtest: localhost report endpoint returns sealed data with authorization
+ok 44 - localhost report endpoint returns sealed data with authorization
+  ---
+  duration_ms: 380.5696
+  type: 'test'
+  ...
+# Subtest: server refuses bad token
+ok 45 - server refuses bad token
+  ---
+  duration_ms: 52.513
+  type: 'test'
+  ...
+# Subtest: server refuses tampered report
+ok 46 - server refuses tampered report
+  ---
+  duration_ms: 52.2402
+  type: 'test'
+  ...
+# Subtest: CLI rejects writing report inside scanned repository
+ok 47 - CLI rejects writing report inside scanned repository
+  ---
+  duration_ms: 15.5845
+  type: 'test'
+  ...
+# Subtest: CLI doctor command prints useful JSON
+ok 48 - CLI doctor command prints useful JSON
+  ---
+  duration_ms: 20.7683
+  type: 'test'
+  ...
+# Subtest: issue snapshot cannot be an object
+ok 49 - issue snapshot cannot be an object
+  ---
+  duration_ms: 24.8308
+  type: 'test'
+  ...
+# Subtest: issue snapshot malformed JSON fails closed
+ok 50 - issue snapshot malformed JSON fails closed
+  ---
+  duration_ms: 18.3908
+  type: 'test'
+  ...
+# Subtest: issue body injection never becomes instructions in plan
+ok 51 - issue body injection never becomes instructions in plan
+  ---
+  duration_ms: 150.666
+  type: 'test'
+  ...
+# Subtest: an invented pass status remains not run
+ok 52 - an invented pass status remains not run
+  ---
+  duration_ms: 62.3274
+  type: 'test'
+  ...
+# Subtest: PR reports never contain source contributor secrets
+ok 53 - PR reports never contain source contributor secrets
+  ---
+  duration_ms: 61.46
+  type: 'test'
+  ...
+# Subtest: GitHub write capability absent from report
+ok 54 - GitHub write capability absent from report
+  ---
+  duration_ms: 95.5614
+  type: 'test'
+  ...
+# Subtest: server forbids POST mutation
+ok 55 - server forbids POST mutation
+  ---
+  duration_ms: 65.9239
+  type: 'test'
+  ...
+# Subtest: all specialist skills have frontmatter
+ok 56 - all specialist skills have frontmatter
+  ---
+  duration_ms: 78.8921
+  type: 'test'
+  ...
+# Subtest: all workflow declarations parse
+ok 57 - all workflow declarations parse
+  ---
+  duration_ms: 47.5466
+  type: 'test'
+  ...
+# Subtest: all ten rules exist
+ok 58 - all ten rules exist
+  ---
+  duration_ms: 7.2078
+  type: 'test'
+  ...
+# Subtest: CLI rejects missing argument values
+ok 59 - CLI rejects missing argument values
+  ---
+  duration_ms: 1.4639
+  type: 'test'
+  ...
+# Subtest: report seal does not rely on AI model
+ok 60 - report seal does not rely on AI model
+  ---
+  duration_ms: 73.8981
+  type: 'test'
+  ...
+# Subtest: codex project-local skill copying creates portable files
+ok 61 - codex project-local skill copying creates portable files
+  ---
+  duration_ms: 1167.8314
+  type: 'test'
+  ...
+# Subtest: gemini project-local skill copying creates portable files
+ok 62 - gemini project-local skill copying creates portable files
+  ---
+  duration_ms: 3230.7675
+  type: 'test'
+  ...
+# Subtest: copilot project-local skill copying creates portable files
+ok 63 - copilot project-local skill copying creates portable files
+  ---
+  duration_ms: 4259.7493
+  type: 'test'
+  ...
+# Subtest: opencode project-local skill copying creates portable files
+ok 64 - opencode project-local skill copying creates portable files
+  ---
+  duration_ms: 4948.717
+  type: 'test'
+  ...
+# Report written: C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\cs-cli-YWsE1A\\audit.json (+ .md, .html)
+# Subtest: actual CLI scan output preserves the target README
+ok 65 - actual CLI scan output preserves the target README
+  ---
+  duration_ms: 151.3267
+  type: 'test'
+  ...
+# Subtest: CLI verification observes stable sample report
+ok 66 - CLI verification observes stable sample report
+  ---
+  duration_ms: 133.4318
+  type: 'test'
+  ...
+# Subtest: documentation site has 15 pages, home and 404
+ok 67 - documentation site has 15 pages, home and 404
+  ---
+  duration_ms: 15.497
+  type: 'test'
+  ...
+# Subtest: light theme is the default and dark is remembered by choice only
+ok 68 - light theme is the default and dark is remembered by choice only
+  ---
+  duration_ms: 5.082
+  type: 'test'
+  ...
+# Subtest: every internal link and asset in the site resolves
+ok 69 - every internal link and asset in the site resolves
+  ---
+  duration_ms: 165.3845
+  type: 'test'
+  ...
+# Subtest: no unfilled placeholders or unknown directives remain
+ok 70 - no unfilled placeholders or unknown directives remain
+  ---
+  duration_ms: 22.0223
+  type: 'test'
+  ...
+# Subtest: docs pages contain diagrams, charts and flowcharts
+ok 71 - docs pages contain diagrams, charts and flowcharts
+  ---
+  duration_ms: 4.6979
+  type: 'test'
+  ...
+# Subtest: site has accessibility basics: skip link, labelled nav, svg roles, mobile viewport
+ok 72 - site has accessibility basics: skip link, labelled nav, svg roles, mobile viewport
+  ---
+  duration_ms: 3.3274
+  type: 'test'
+  ...
+# Subtest: site claims stay honest: no unverified IDE activation or adoption claims
+ok 73 - site claims stay honest: no unverified IDE activation or adoption claims
+  ---
+  duration_ms: 26.5717
+  type: 'test'
+  ...
+# Subtest: pages workflow deploys the built site folder
+ok 74 - pages workflow deploys the built site folder
+  ---
+  duration_ms: 2.8782
+  type: 'test'
+  ...
+# Subtest: version constant matches package.json
+ok 75 - version constant matches package.json
+  ---
+  duration_ms: 22.8805
+  type: 'test'
+  ...
+# Subtest: scan detects DCO signal with line number and documented commands
+ok 76 - scan detects DCO signal with line number and documented commands
+  ---
+  duration_ms: 47.28
+  type: 'test'
+  ...
+# Subtest: scan finds license text variants
+ok 77 - scan finds license text variants
+  ---
+  duration_ms: 97.7711
+  type: 'test'
+  ...
+# Subtest: scan reads python, rust and go manifests without running them
+ok 78 - scan reads python, rust and go manifests without running them
+  ---
+  duration_ms: 130.661
+  type: 'test'
+  ...
+# Subtest: scan flags instruction-like text as untrusted data with a line number
+ok 79 - scan flags instruction-like text as untrusted data with a line number
+  ---
+  duration_ms: 91.8853
+  type: 'test'
+  ...
+# Subtest: scan lists CI workflows by hash only
+ok 80 - scan lists CI workflows by hash only
+  ---
+  duration_ms: 140.1013
+  type: 'test'
+  ...
+# Subtest: scan accepts alternate default locations
+ok 81 - scan accepts alternate default locations
+  ---
+  duration_ms: 129.6339
+  type: 'test'
+  ...
+# Subtest: range matcher handles common syntax and refuses to guess
+ok 82 - range matcher handles common syntax and refuses to guess
+  ---
+  duration_ms: 4.0749
+  type: 'test'
+  ...
+# Subtest: doctor compares declared requirements with installed tools
+ok 83 - doctor compares declared requirements with installed tools
+  ---
+  duration_ms: 16155.5457
+  type: 'test'
+  ...
+# Subtest: adversarial issues are declined, flagged or ranked correctly
+ok 84 - adversarial issues are declined, flagged or ranked correctly
+  ---
+  duration_ms: 43.454
+  type: 'test'
+  ...
+# Subtest: injected issue text is never echoed in reports
+ok 85 - injected issue text is never echoed in reports
+  ---
+  duration_ms: 35.6174
+  type: 'test'
+  ...
+# Subtest: as-of date must be valid
+ok 86 - as-of date must be valid
+  ---
+  duration_ms: 23.2057
+  type: 'test'
+  ...
+# Subtest: locked issue is declined
+ok 87 - locked issue is declined
+  ---
+  duration_ms: 3.9215
+  type: 'test'
+  ...
+# Subtest: skill declared in title adds a transparent reason
+ok 88 - skill declared in title adds a transparent reason
+  ---
+  duration_ms: 3.3354
+  type: 'test'
+  ...
+# Subtest: learning modes change step content, not safety
+ok 89 - learning modes change step content, not safety
+  ---
+  duration_ms: 268.7782
+  type: 'test'
+  ...
+# Subtest: plan carries project policy reminders from the scan
+ok 90 - plan carries project policy reminders from the scan
+  ---
+  duration_ms: 603.8446
+  type: 'test'
+  ...
+# Subtest: plan for a declined issue is blocked and stays at shortlisted
+ok 91 - plan for a declined issue is blocked and stays at shortlisted
+  ---
+  duration_ms: 322.9064
+  type: 'test'
+  ...
+# Subtest: PR packet separates evidence channels and drafts a description
+ok 92 - PR packet separates evidence channels and drafts a description
+  ---
+  duration_ms: 458.2932
+  type: 'test'
+  ...
+# Subtest: undeclared AI assistance is a gap
+ok 93 - undeclared AI assistance is a gap
+  ---
+  duration_ms: 218.1096
+  type: 'test'
+  ...
+# Subtest: every report kind renders Markdown and HTML with the seal status and no scripts
+ok 94 - every report kind renders Markdown and HTML with the seal status and no scripts
+  ---
+  duration_ms: 455.1582
+  type: 'test'
+  ...
+# Subtest: Markdown cannot be broken out of by hostile issue titles
+ok 95 - Markdown cannot be broken out of by hostile issue titles
+  ---
+  duration_ms: 14.7014
+  type: 'test'
+  ...
+# Subtest: redaction handles private keys and npm tokens
+ok 96 - redaction handles private keys and npm tokens
+  ---
+  duration_ms: 0.4741
+  type: 'test'
+  ...
+# Subtest: audit report: every assurance check passes or is honestly skipped
+ok 97 - audit report: every assurance check passes or is honestly skipped
+  ---
+  duration_ms: 5576.4751
+  type: 'test'
+  ...
+# Subtest: audit of an empty repository reports GAPS_FOUND (negative control)
+ok 98 - audit of an empty repository reports GAPS_FOUND (negative control)
+  ---
+  duration_ms: 3946.5283
+  type: 'test'
+  ...
+# Subtest: parse supports boolean flags and rejects stray double dash
+ok 99 - parse supports boolean flags and rejects stray double dash
+  ---
+  duration_ms: 2.7533
+  type: 'test'
+  ...
+# Subtest: CLI --version, help and unknown command exit codes
+ok 100 - CLI --version, help and unknown command exit codes
+  ---
+  duration_ms: 15115.8312
+  type: 'test'
+  ...
+# Subtest: CLI scan writes json/md/html, refuses overwrite, then --force overwrites
+ok 101 - CLI scan writes json/md/html, refuses overwrite, then --force overwrites
+  ---
+  duration_ms: 12794.9831
+  type: 'test'
+  ...
+# Subtest: CLI verify exits 0 for an intact report and 1 for a tampered one
+ok 102 - CLI verify exits 0 for an intact report and 1 for a tampered one
+  ---
+  duration_ms: 10757.278
+  type: 'test'
+  ...
+# Subtest: CLI render converts a sealed report and refuses a tampered one
+ok 103 - CLI render converts a sealed report and refuses a tampered one
+  ---
+  duration_ms: 5413.0414
+  type: 'test'
+  ...
+# Subtest: CLI audit writes JSON, Markdown, HTML and checksums
+ok 104 - CLI audit writes JSON, Markdown, HTML and checksums
+  ---
+  duration_ms: 15349.1896
+  type: 'test'
+  ...
+# Subtest: CLI doctor --root compares the repo requirement
+ok 105 - CLI doctor --root compares the repo requirement
+  ---
+  duration_ms: 10084.5026
+  type: 'test'
+  ...
+# Subtest: CLI plan and pr-check accept options and validate numbers
+ok 106 - CLI plan and pr-check accept options and validate numbers
+  ---
+  duration_ms: 3735.6108
+  type: 'test'
+  ...
+# Subtest: CLI works when launched through a symlink (npm bin shim)
+ok 107 - CLI works when launched through a symlink (npm bin shim) # SKIP symlink creation not permitted here (EPERM)
+  ---
+  duration_ms: 14.426
+  type: 'test'
+  ...
+# Subtest: agents manifest, skills and role files agree
+ok 108 - agents manifest, skills and role files agree
+  ---
+  duration_ms: 146.7428
+  type: 'test'
+  ...
+# Subtest: JSON schemas parse and name their report kind
+ok 109 - JSON schemas parse and name their report kind
+  ---
+  duration_ms: 21.1353
+  type: 'test'
+  ...
+# Subtest: README does not claim unverified IDE execution
+ok 110 - README does not claim unverified IDE execution
+  ---
+  duration_ms: 3.0098
+  type: 'test'
+  ...
+# Subtest: no secrets committed in source files
+ok 111 - no secrets committed in source files
+  ---
+  duration_ms: 503.3928
+  type: 'test'
+  ...
+# Subtest: emitted reports carry every field their schema requires
+ok 112 - emitted reports carry every field their schema requires
+  ---
+  duration_ms: 1028.2799
+  type: 'test'
+  ...
+1..112
+# tests 112
+# suites 0
+# pass 108
+# fail 0
+# cancelled 0
+# skipped 4
+# todo 0
+# duration_ms 114271.1196

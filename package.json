@@ -1,6 +1,6 @@
 {
   "name": "contribsutra-ai",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "ContribSutra AI: offline, evidence-backed open-source contributor onboarding CLI plus 25 portable Agent Skills (Claude Code, Cursor, Codex, Copilot, Gemini CLI). Teaches contributors; protects maintainers from PR spam. No API keys, no network.",
   "author": {
     "name": "Vatsal Shah",
@@ -22,7 +22,8 @@
     "demo": "node scripts/demo.mjs",
     "audit": "node packages/cli/index.mjs audit --out examples/reports/audit --force",
     "pack:check": "npm pack --dry-run",
-    "proof": "node scripts/proof.mjs"
+    "proof": "node scripts/proof.mjs",
+    "docs:build": "node documents/build.mjs"
   },
   "homepage": "https://github.com/shahvatsalofficial/contribsutra-ai#readme",
   "repository": {

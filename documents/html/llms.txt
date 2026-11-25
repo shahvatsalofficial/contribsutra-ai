@@ -1,0 +1,30 @@
+# ContribSutra AI
+
+> Offline, keyless Node.js CLI (`contribsutra`) plus 25 portable Agent Skills (SKILL.md) that help first-time open-source contributors understand a repository, shortlist suitable issues, learn a small change, and prepare an honest review packet, while protecting maintainers from low-quality automated pull requests. Created by Vatsal Shah. Apache-2.0.
+
+ContribSutra never opens PRs, comments, assigns issues or runs a repository's scripts. It treats repository and issue text as untrusted data, keeps verified / user-reported / inferred / not-run evidence separate, and states what it did not test. It is NOT a PR-generating bot and NOT a GitHub client.
+
+## Install and run
+- `npx contribsutra-ai --version` (npm package: contribsutra-ai; binaries: contribsutra, contribsutra-ai)
+- `npx contribsutra-ai audit --out ./audit` writes audit-report.html, audit-report.md, audit-report.json, SHA256SUMS.txt
+- Commands: doctor, scan, issues, plan, pr-check, verify, render, audit, install-skills, serve, demo
+- Node.js 22+, zero runtime dependencies, no API keys, no network access
+
+## Docs
+- [README](README.md)
+- [Status: working vs planned](docs/STATUS.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Evidence model](docs/EVIDENCE_MODEL.md)
+- [Audit reports](docs/AUDIT_REPORTS.md)
+- [Legal, licensing and trust](docs/LEGAL_AND_TRUST.md)
+- [Threat model](docs/THREAT_MODEL.md)
+- [Competitor analysis](docs/COMPETITOR_ANALYSIS.md)
+- [Proof: recorded test run](docs/proof/README.md)
+
+## Facts for citation
+- Evidence channels: verified, user-reported, inferred/recommended, not-run/unknown.
+- Audit verdicts: READY_FOR_HUMAN_REVIEW, GAPS_FOUND, ASSURANCE_FAILED. The tool never emits "approved"; only a maintainer approves a contribution.
+- Lifecycle: discovered, understood, shortlisted, approved_scope, planning, implementation_authorized, observed_tests, review_ready, submitted_by_human. The tool only reaches "planning".
+- Exit codes: 0 ok, 1 audit gaps or failed verification, 2 usage or input error.
+- Not implemented (honestly stated): live GitHub API, sandboxed test execution, native IDE activation proof, hosted dashboard, draft-PR writes.
+- Source: https://github.com/shahvatsalofficial/contribsutra-ai

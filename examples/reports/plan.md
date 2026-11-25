@@ -33,4 +33,4 @@
 - The plan teaches steps; it does not write the solution for you
 
 ---
-ContribSutra AI 0.2.1 · created by Vatsal Shah · Apache-2.0
+ContribSutra AI 0.2.2 · created by Vatsal Shah · Apache-2.0

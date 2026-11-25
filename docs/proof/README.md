@@ -4,11 +4,11 @@ Regenerate: `npm run proof`. These files are machine output, not hand-written.
 
 | Field | Value |
 |---|---|
-| Tool | contribsutra-ai 0.2.1 |
+| Tool | contribsutra-ai 0.2.2 |
 | Node / platform | v24.15.0 · win32/x64 |
-| Recorded | 2026-11-17T17:19:18.516Z |
-| Tests | 104 |
-| Passed | 100 |
+| Recorded | 2026-11-25T14:19:32.153Z |
+| Tests | 112 |
+| Passed | 108 |
 | Failed | 0 |
 | Skipped | 4 (symlink tests skip on hosts that forbid symlinks; they run on Linux/macOS CI) |
 | Fuzz: issue snapshots | 3000 cases, 0 unexpected crashes |

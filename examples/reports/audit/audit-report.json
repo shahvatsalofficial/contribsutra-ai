@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "kind": "contribsutra.audit-report",
-  "toolVersion": "0.2.1",
-  "recordedAt": "2026-11-17T17:19:55.072Z",
+  "toolVersion": "0.2.2",
+  "recordedAt": "2026-11-25T14:21:04.484Z",
   "verdict": "READY_FOR_HUMAN_REVIEW",
   "verdictRule": "ASSURANCE_FAILED if any safety-gate check fails; GAPS_FOUND if the repository lacks important onboarding files or contains instruction-like text; otherwise READY_FOR_HUMAN_REVIEW. This tool never emits \"approved\": only a maintainer can approve a contribution.",
   "subject": {
@@ -335,6 +335,6 @@
   },
   "seal": {
     "method": "SHA-256 JSON serialization",
-    "hash": "67acebabfd417830ec672260296ce1fc112d371cf2a0727df4edd73c0e839d1e"
+    "hash": "1e96ab76b2223cb2ace065b5afded79429340cd16c2b0d101f2cbbddccc54345"
   }
 }
